@@ -37,6 +37,8 @@ while True:
 j = pygame.joystick.Joystick(0)
 j.init()
 
+#########################################################
+# Ripped this out of my R2 Control system! 
 class _AudioLibrary(object):
     """
     The class for playing audio samples via pygame mixer
@@ -98,9 +100,6 @@ class _AudioLibrary(object):
              Sound group prefix
         """
 
-        #idx = _Random_Sounds.index(data)
-        #prefix = _Random_Files[idx]
-        #print(f"Random index: {idx}, prefix={prefix}, sounds_dir={self.sounds_dir}")
         file_list = glob.glob(self.sounds_dir + data + "/*.mp3")
         file_idx = len(file_list) - 1
         audio_file = file_list[random.randint(0, file_idx)]
@@ -133,6 +132,7 @@ audio.TriggerSound("bd-1-woo-hoo")
 joystick = True
 debug_me = False
 
+########################################################################
 # Main loop. Whilst joystick is true, constantly run this. If the joystick disappears then joystick will get set to false, causing the 
 # whole script to end and get restarted by systemd. 
 while joystick:
@@ -223,7 +223,4 @@ while joystick:
             except Exception as e:
                print(f"Failed to play sound: {e}")
 
-
-
-         
 
