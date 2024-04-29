@@ -4,10 +4,10 @@ After=network.target
  
 [Service]
 Type=simple
-User=root
-Group=root
-ExecStart=python3 ./controllertest.py
-WorkingDirectory=/home/pi/bd2_control
+User=USER
+Group=GROUP
+ExecStart=python3 ./main.py
+WorkingDirectory=PWD
 StandardOutput=syslog
 StandardError=syslog
 Restart=on-failure
