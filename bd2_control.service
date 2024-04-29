@@ -1,0 +1,17 @@
+[Unit]
+Description=BD2 Control
+After=network.target
+ 
+[Service]
+Type=simple
+User=root
+Group=root
+ExecStart=python3 ./controllertest.py
+WorkingDirectory=/home/pi/bd2_control
+StandardOutput=syslog
+StandardError=syslog
+Restart=on-failure
+ 
+[Install]
+WantedBy=network.target
+Alias=r2_control.service
