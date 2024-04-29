@@ -1,5 +1,11 @@
 # bd2_control
 
+## Prereqs.
+
+You will need pygame and servokit installed
+
+## Install
+
 Download repo either using git clone, or download the zip
 
 Enter the directory and run the install script:
